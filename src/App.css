@@ -1,38 +1,264 @@
-.App {
+@import '~antd/dist/antd.css';
+
+.container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 250px 250px 250px 250px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.poster {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.poster:hover {
+    width: 90%;
+    cursor: pointer;
+}
+
+.titlePopular {
+    padding-top: 50px;
+    padding-left: 240px;
+    padding-bottom: 20px;
+}
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: brightness(25%);
+  }
+  
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.content {
+  position: fixed;
+  color: #fff;
+}
+
+.navbar1 {
+  position: absolute;
+  z-index: 9999;
+  left: 20px;
+}
+
+.navbar3 {
+  position: absolute;
+  z-index: 9999;
+  right: 20px;
+  top: 10px;
+}
+
+.navbar2 {
+  position: absolute;
+  z-index: 9999;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  color: #E80000;
+  font-size: 35px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputsearch {
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 20px;
+  width: 500px;
+  padding-left: 20px;
+  color: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navsearch {
+  margin-left: -40px;
+  color: white;
+  size: 100px;
+}
+
+::placeholder {
+  color: #B0B0B0;
+  opacity: 1;
+}
+
+.buttonlr {
+  padding-left: 20px;
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.buttonWatch {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.crslTitle {
+  font-weight: bold;
+  color: white;
+  padding-top: 180px;
+  padding-left: 20px;
+  font-size: 40px;
+}
+
+.crslOverview {
+  color: white;
+  padding-left: 20px;
+  width: 800px;
+}
+
+.crslWatch {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.detailTitle {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  padding-left: 40px;
+  padding-top: 180px;
+}
+
+.detailGenre {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.detailGenre1 {
+  padding-left: 40px;
+}
+
+.detailOverview {
+  width: 800px;
+  padding-left: 40px;
+}
+
+.star {
+  color: orange;
+  padding-right: 5px;
+  padding-left: 40px;
+}
+
+.buttonWatchDetail {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.inputlogin, .inputpass {
+  border: 2px solid red;
+  border-radius: 20px;
+  width: 350px;
+  padding-left: 20px;
+  color: black;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.buttonLogin {
+  border: 2px solid red;
+  border-radius: 20px;
+  width: 350px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  background: red;
+  color: white;
+  margin-top: 20px;
+}
+
+.buttonLogin:hover {
+  background: #FF7474;
+  border: 2px solid #FF7474;
+  color: #fff;
+}
+
+.containerLogin {
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #4A0000 ;
 }
 
-.App-link {
-  color: #61dafb;
+.form {
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  font-size: 28px;
+  font-weight: 600;
+  color: red;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.spasiPass {
+  margin-top: 15px;
+}
+
+.registerText, .loginText {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.registerText1, .loginText1 {
+  color: red;
+}
+
+.inputName {
+  border: 2px solid red;
+  border-radius: 20px;
+  width: 170px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.lastNameText {
+  padding-left: 95px;
+}
+
+.buttonGoogle {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 350px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  background: #fff;
+  color: black;
+  margin-top: 20px;
+}
+
+.buttonGoogle:hover {
+  background: #FFFDE9;
+  border: 2px solid black;
+  color: black;
 }
